@@ -84,27 +84,33 @@
           <!-- Carousel End -->
 
         </div>
+
         <div class="order">
           <h2 style="text-align: center">Order Now!</h2>
           <table class="ordernow">
             <tr>
               <td>
-                <a href="https://www.instagram.com/dapoerpoen/"><img class="ig" src="{{asset('image/Untitled.jpeg')}}" alt="" /></a>
+                <a href="https://www.instagram.com/dapoerpoen/"><img class="ig" src="{{asset('image/ig.webp')}}" alt="" /></a>
               </td>
               <td>
                 <a href="https://api.whatsapp.com/send?phone=6281211631788"
-                  ><img class="wa" src="{{asset('image/Untitled.jpeg')}}" alt=""
+                  ><img class="wa" src="{{asset('image/whatsapp.png')}}" alt=""
                 /></a>
               </td>
               <td>
                 <a href="https://www.facebook.com/dapoer.poen"
-                  ><img class="fb" src="{{asset('image/Untitled.jpeg')}}" alt=""
+                  ><img class="fb" src="{{asset('image/facebook.png')}}" alt=""
                 /></a>
               </td>
             </tr>
           </table>
         </div>
+
+
       </div>
     </div>
  @include('compartments.footer')
+ </body>
+  <script src="{{asset('js/script.js')}}"></script>
+  </html>
 
