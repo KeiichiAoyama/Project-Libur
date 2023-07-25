@@ -16,9 +16,11 @@
     <div class="container">
       <div class="navbars">
         <a href="home.html"><img src="{{asset('image/logo.png')}}" class="logo" alt="" /></a>
-        <div class="navbar-links">
-          <a href="{{route('home')}}" style="color: #ffdb9c;">Home</a>
-          <a href="{{route('product')}}">Products</a>
-          <a href="{{route('about')}}">About</a>
+        <div class="navbar-links" id="navlink">
+          <a href="{{route('home')}}" style="<?php if($int == 0) echo("color: #ffdb9c;"); ?>" >Home</a>
+          <a href="{{route('product')}}" style="<?php if($int == 1) echo("color: #ffdb9c;"); ?>" >Products</a>
+          <a href="{{route('about')}}" style="<?php if($int == 2) echo("color: #ffdb9c;"); ?>" >About</a>
         </div>
       </div>
+</body>
+<script src="{{asset('js/script.js')}}"></script>

@@ -14,13 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $int = 0;
+    return view('home',  ['int' => $int]);
 })->name('home');
 
 Route::get('/product', function () {
-    return view('product');
+    $int = 1;
+    return view('products',  ['int' => $int]);
 })->name('product');
 
 Route::get('/about', function () {
-    return view('about');
+    $int = 2;
+    return view('about',  ['int' => $int]);
 })->name('about');
