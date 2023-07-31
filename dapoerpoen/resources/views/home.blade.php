@@ -1,36 +1,43 @@
+<?php
+  use Illuminate\Support\Facades\Session;
+
+  $lang = session::get('language');
+  $arr = session::get('arr');
+  $dscr = "dscr".$lang;
+  $name = "name".$lang;
+  $test = "test".$lang;
+?>
+
 @include('compartments.navbar')
       <div class="homecontent">
-        <table class="hometable">
+        <table class="hometable" style="padding: 30px;">
           <tr>
             <td>
-              <img src="{{asset('image/whatsapp.png')}}" alt="" style="width: 50px" />
+              <img src="{{ asset('image/' . $arr[0]->id . '.jpeg') }}" alt="" style="width: 250px" />
             </td>
             <td>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Facilis, veritatis.
+              <p style="text-align: left;">
+                <?php echo $arr[0]->$dscr ?>
               </p>
             </td>
           </tr>
           <tr>
             <td>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Repudian, expedita?
+              <p style="text-align: right;">
+              <?php echo $arr[1]->$dscr ?>
               </p>
             </td>
             <td>
-              <img src="{{asset('image/whatsapp.png')}}" alt="" style="width: 50px" />
+              <img src="{{ asset('image/' . $arr[1]->id . '.jpeg') }}" alt="" style="width: 250px" />
             </td>
           </tr>
           <tr>
             <td>
-              <img src="{{asset('image/whatsapp.png')}}" alt="" style="width: 50px" />
+              <img src="{{ asset('image/' . $arr[2]->id . '.jpeg') }}" alt="" style="width: 250px" />
             </td>
             <td>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Aliquam, quasi?
+              <p style="text-align: left;">
+              <?php echo $arr[2]->$dscr ?>
               </p>
             </td>
           </tr>
@@ -112,5 +119,6 @@
  @include('compartments.footer')
  </body>
   <script src="{{asset('js/script.js')}}"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </html>
 

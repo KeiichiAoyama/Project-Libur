@@ -19,3 +19,31 @@ function showSlides() {
     dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
+
+function changelanguage(num) {
+    let data;
+
+    switch (num) {
+        case 1:
+            data = "EN";
+            break;
+        case 2:
+            data = "ID";
+            break;
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "/language",
+        data: { data: data },
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        },
+        success: function (response) {
+            location.reload();
+        },
+        error: function (xhr, status, error) {
+            console.log(error);
+        },
+    });
+}
